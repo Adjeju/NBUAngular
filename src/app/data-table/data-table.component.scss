@@ -1,0 +1,36 @@
+.table-component {
+  margin: 10px 0;
+  box-shadow: 0px 0px 11px -3px rgba(34, 60, 80, 0.29);
+
+  table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      font-size: 20px;
+      color: white;
+
+      tr {
+        border-radius: 10px;
+        background: #1d3557;
+        td {
+          padding: 15px 0;
+        }
+      }
+    }
+
+    tbody {
+      font-size: 20px;
+      tr {
+        td {
+          padding: 20px 0;
+        }
+        &:nth-child(even) {
+          color: #f1faee;
+          background: #a8dadc;
+        }
+      }
+    }
+  }
+}

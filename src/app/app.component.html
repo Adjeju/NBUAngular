@@ -1,0 +1,5 @@
+<div class="container">
+  <currency-form (formEvent)="setData($event)"></currency-form>
+  <app-data-table *ngIf="type == 'table'" [dataSet]="dataSet"></app-data-table>
+  <app-data-chart *ngIf="type == 'chart'" [dataSet]="dataSet"></app-data-chart>
+</div>

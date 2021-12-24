@@ -1,0 +1,29 @@
+<fieldset>
+  <legend>Parameters</legend>
+  Currency
+
+  <select [(ngModel)]="currency">
+    <option *ngFor="let currency of currenciesCode" [value]="currency">
+      {{ currency }}
+    </option>
+  </select>
+
+  Start:
+  <input
+    type="date"
+    #startDateInput
+    ([value])="(startDate)"
+    (input)="startInputChangeHandler(startDateInput.value)"
+  />
+
+  End:
+  <input
+    type="date"
+    ([value])="(endDate)"
+    #endDateInput
+    (input)="endInputChangeHandler(endDateInput.value)"
+  />
+
+  <button class="button" (click)="pushData('table')">Table</button>
+  <button class="button" (click)="pushData('chart')">Charts</button>
+</fieldset>
